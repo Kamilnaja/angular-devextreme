@@ -1,33 +1,8 @@
 import { Injectable } from '@angular/core';
 
-export class CompanyList {
-    CompanyName: string;
-}
+export class DictionariesList {};
 
-
-const companiesList: CompanyList[] = [
-    {
-        'CompanyName': 'CAXT',
-    },
-    {
-        'CompanyName': 'OPTIQUE',
-    },
-    {
-        'CompanyName': 'DIGIFAD',
-    },
-    {
-        'CompanyName': 'ZILLAR',
-    },
-    {
-        'CompanyName': 'AUTOMON',
-    },
-    {
-        'CompanyName': 'NEPTIDE',
-    },
-    {
-        'CompanyName': 'SNACKTION',
-    }
-];
+const dictionariesList = ['DIC_AD_STATUS', 'DIC_AD_INFO', 'DIC_AD_POWOD'];
 
 export class Dictionaries {
     Name: string;
@@ -170,7 +145,7 @@ const dictionaries: Dictionaries[] = [
             }
         ]
     }
-]
+];
 
 
 @Injectable()
@@ -178,7 +153,7 @@ export class Service {
     getDictionaries() {
         return dictionaries;
     }
-    getCompaniesList() {
-        return companiesList;
+    getDictionariesList() {
+        return dictionariesList;
     }
 }

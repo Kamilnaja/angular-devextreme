@@ -3,20 +3,17 @@
         <dx-select-box
         #selectBox
         [dataSource]="dataSourceList" 
-        displayExpr="CompanyName"
-        valueExpr="CompanyName"
         placeholder="Wybierz słownik"
-        (onChange)="logSelectValue()"
+        (onValueChanged)="onValueChanged($event)"
         ></dx-select-box>
     </div>
     <div class="current-value">
+        
         {{selectBox.value}}
+        <!-- trzeba przekazać te dane do componentu i zamienić na tablicę -->
     </div>
     <!-- pobierz dane z select boxa i je wyświetl w app.component -->
-    <div [hidden]="true">
-        <!-- po wciśnięciu buttona, wyszukaj i wyświetl odpowiedni data grid -->
-        <dx-button text="Szukaj" (onClick)="searchDataGrid()">
-        </dx-button>
+    <div [hidden]="!selectBox.value">
         
         <br />
         <!-- todo - pobierz odpowiedni słownik, który był wybrany z select boxa wcześniej -->
