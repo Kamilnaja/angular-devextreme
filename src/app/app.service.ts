@@ -64,7 +64,7 @@ const dictionaries: Dictionaries[] = [
         entries: [
             {
                 'Id': '5a104b34b7ed211b6375d558',
-                'CompanyName': 'CAXT',
+                'CompanyName': 'Lorem Dic ad infoT',
                 'Address': '783 Tapscott Avenue, Haena, West Virginia, 1926',
                 'City': false,
                 'State': '$2,454.30',
@@ -75,7 +75,7 @@ const dictionaries: Dictionaries[] = [
             },
             {
                 'Id': '5a104b348e26da70596c6266',
-                'CompanyName': 'OPTIQUE',
+                'CompanyName': 'Super',
                 'Address': '172 Hanover Place, Cawood, North Carolina, 814',
                 'City': false,
                 'State': '$1,271.73',
@@ -86,7 +86,7 @@ const dictionaries: Dictionaries[] = [
             },
             {
                 'Id': '5a104b342e32206333cabc53',
-                'CompanyName': 'DIGIFAD',
+                'CompanyName': 'Amazing',
                 'Address': '467 Melrose Street, Grazierville, Montana, 6666',
                 'City': true,
                 'State': '$1,519.05',

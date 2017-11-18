@@ -8,15 +8,12 @@
         ></dx-select-box>
     </div>
     <div class="current-value">
-        
         {{selectBox.value}}
-        <!-- trzeba przekazać te dane do componentu i zamienić na tablicę -->
     </div>
-    <!-- pobierz dane z select boxa i je wyświetl w app.component -->
     <div [hidden]="!selectBox.value">
-        
         <br />
-        <!-- todo - pobierz odpowiedni słownik, który był wybrany z select boxa wcześniej -->
-        <dx-data-grid [dataSource]="dataSource[0].entries"></dx-data-grid>
+        <dx-data-grid 
+            [dataSource]="currentGrid"
+        ></dx-data-grid>
     </div>
 </div>

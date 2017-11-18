@@ -11,14 +11,16 @@ export class AppComponent {
   name: String;
   dataSource: Dictionaries[];
   dataSourceList: DictionariesList[];
-
+  gridValue: number;
+  currentGrid: any;
   constructor(service: Service) {
     this.dataSourceList = service.getDictionariesList();
     this.dataSource = service.getDictionaries();
   }
 
   onValueChanged($event) {
-    console.log(this.dataSourceList.indexOf($event.value));
-    console.log(this.dataSourceList);
+    // pobiera index tablicy wybranego elementu słownika
+    this.gridValue = this.dataSourceList.indexOf($event.value);
+    this.currentGrid = this.dataSource[this.gridValue].entries;
   }
 }
