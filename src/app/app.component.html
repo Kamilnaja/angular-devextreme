@@ -1,14 +1,25 @@
-<dx-text-box width="300" [(value)]="name">
-    <dx-validator [validationRules]="[{
-        type: 'required',
-        message: 'Login is required'
-    }]">
-    </dx-validator>
-</dx-text-box>
-<dx-button 
-    text="DevExtreme Button in Angular!" 
-    (onClick)="sayHello($event)"
-    [useSubmitBehavior]="true"
-    >
-<dx-validation-summary></dx-validation-summary>
-</dx-button>
+<div class="dx-fieldset">
+    <div class="dx-field">
+        <dx-select-box
+        #selectBox
+        [dataSource]="dataSourceList" 
+        displayExpr="CompanyName"
+        valueExpr="CompanyName"
+        placeholder="Wybierz słownik"
+        (onChange)="logSelectValue()"
+        ></dx-select-box>
+    </div>
+    <div class="current-value">
+        {{selectBox.value}}
+    </div>
+    <!-- pobierz dane z select boxa i je wyświetl w app.component -->
+    <div [hidden]="true">
+        <!-- po wciśnięciu buttona, wyszukaj i wyświetl odpowiedni data grid -->
+        <dx-button text="Szukaj" (onClick)="searchDataGrid()">
+        </dx-button>
+        
+        <br />
+        <!-- todo - pobierz odpowiedni słownik, który był wybrany z select boxa wcześniej -->
+        <dx-data-grid [dataSource]="dataSource[0].entries"></dx-data-grid>
+    </div>
+</div>
